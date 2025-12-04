@@ -316,6 +316,13 @@ $(function() {
     // 投稿一覧表示順序選択
     $('#sortOrder').on('change', loadPosts);
 
+       // 更新ボタン
+    $('#refreshButton').on('click', () => {
+        loadPosts();
+        showMessage('投稿一覧を更新しました');
+    });
+
+    
     // 投稿一覧の初期読み込み
     loadPosts();
 });
