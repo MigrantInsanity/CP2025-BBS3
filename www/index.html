@@ -175,6 +175,9 @@ function renderPosts(posts) {
     const postsDiv = $('#postsList');
     postsDiv.empty();
 
+    // 投稿数を更新
+    $('#postsCount').text(`投稿数: ${posts.length}件`);
+
     if (posts.length === 0) {
         postsDiv.html('<p class="no-posts">投稿はありません</p>');
         return;
