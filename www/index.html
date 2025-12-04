@@ -364,12 +364,18 @@ window.addEventListener('unload', function() {
 
         <!-- 投稿一覧 -->
         <div class="posts-container">
-            <h2>投稿一覧</h2>
+                        <div class="posts-header">
+                <h2>投稿一覧</h2>
+                <span id="postsCount" class="posts-count">投稿数: 0件</span>
+            </div>
             <div class="posts-control">
                 <select id="sortOrder" class="form-control">
                     <option value="newest">新しい順</option>
                     <option value="oldest">古い順</option>
                 </select>
+                               <button id="refreshButton" class="btn-refresh" title="更新">
+                    🔄 更新
+                </button>
             </div>
             <div id="postsList"></div>
             <div id="loadingSpinner" class="loading-spinner" style="display: none;">
